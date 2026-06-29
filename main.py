@@ -112,32 +112,32 @@ class SeatAutoBooker:
         button_path_selector = """//*[@id="react-root"]/div/div/div[1]/div[2]/div/div[1]/div[2]/div/div/div/div/div[1]/div[3]"""
 
         try:
-            logging.info('开始登陆...')
+            #logging.info('开始登陆...')
 
-            self.driver.get("https://hdu.huitu.zhishulib.com/")
-            logging.debug('打开网站.')
+            #self.driver.get("https://hdu.huitu.zhishulib.com/")
+            #logging.debug('打开网站.')
 
-            self.wait.until(EC.presence_of_element_located((By.NAME, "login_name")))
-            logging.debug('找到用户名输入框.')
+            #self.wait.until(EC.presence_of_element_located((By.NAME, "login_name")))
+            #logging.debug('找到用户名输入框.')
 
-            self.wait.until(EC.presence_of_element_located((By.XPATH, pwd_path_selector)))
-            logging.debug('找到密码输入框.')
+            #self.wait.until(EC.presence_of_element_located((By.XPATH, pwd_path_selector)))
+            #logging.debug('找到密码输入框.')
 
-            self.wait.until(EC.presence_of_element_located((By.XPATH, button_path_selector)))
-            logging.debug('找到登录按钮.')
+            #self.wait.until(EC.presence_of_element_located((By.XPATH, button_path_selector)))
+            #logging.debug('找到登录按钮.')
 
-            self.driver.find_element(By.NAME, 'login_name').clear()
-            self.driver.find_element(By.NAME, 'login_name').send_keys(self.un)  # 传送帐号
-            logging.info('输入用户名')
+            #self.driver.find_element(By.NAME, 'login_name').clear()
+            #self.driver.find_element(By.NAME, 'login_name').send_keys(self.un)  # 传送帐号
+            #logging.info('输入用户名')
 
-            self.driver.find_element(By.XPATH, pwd_path_selector).clear()
-            self.driver.find_element(By.XPATH, pwd_path_selector).send_keys(self.pd)  # 输入密码
-            logging.info('输入密码')
-            logging.info('点击登录按钮')
-            self.driver.find_element(By.XPATH, button_path_selector).click()
-            time.sleep(5)
-            cookie_list = self.driver.get_cookies()
-            self.cookie = ";".join([item["name"] + "=" + item["value"] + "" for item in cookie_list])
+            #self.driver.find_element(By.XPATH, pwd_path_selector).clear()
+            #self.driver.find_element(By.XPATH, pwd_path_selector).send_keys(self.pd)  # 输入密码
+            #logging.info('输入密码')
+            #logging.info('点击登录按钮')
+            #self.driver.find_element(By.XPATH, button_path_selector).click()
+            #time.sleep(5)
+            #cookie_list = self.driver.get_cookies()
+            self.cookie = uid=05d1N-Wz1ehC5dAJllAz94mLvhkHoTx1F7aVazFPAtOERw4; expires=Wed, 29-Jul-2026 12:17:34 GMT; Max-Age=2592000; path=/; SameSite=none; secure
             self.cfg["headers"]['Cookie'] = self.cookie
 
             logging.info("登录成功！")
