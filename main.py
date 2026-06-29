@@ -212,6 +212,12 @@ if __name__ == "__main__":
         s.driver.quit()
         logging.info('Getting user info unsuccessful')
         exit(-1)
-    s.book_favorite_seat(user_config=user_config, seat_config=seat_config)
+    code, msg = s.book_favorite_seat(user_config=user_config, seat_config=seat_config)
+    print("预约结果：", code, msg)
+
+    if code == 0:
+        print("✅ 预约成功")
+    else:
+        print("❌ 预约失败")
     s.driver.quit()
     logging.info('End of the program')
