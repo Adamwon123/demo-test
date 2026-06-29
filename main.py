@@ -96,7 +96,7 @@ class SeatAutoBooker:
             seat = seats[0]
         else:
             seat = random.choice(seats)
-        data = f"beginTime={total_seconds}&duration={3600 * date_config['持续小时数']}&&seats[0]={seat}&seatBookers[0]={self.user_data['uid']}&visitorNum=0"
+        data = f"beginTime={total_seconds}&duration={3600 * date_config['持续小时数']}&&seats[0]={seat}&seatBookers[0]={self.user_data['uid']}"
 
         headers = self.cfg["headers"]
         headers['Cookie'] = self.cookie
