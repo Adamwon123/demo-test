@@ -137,7 +137,7 @@ class SeatAutoBooker:
             #self.driver.find_element(By.XPATH, button_path_selector).click()
             #time.sleep(5)
             #cookie_list = self.driver.get_cookies()
-            self.cookie = "web_language=zh-CN; PHPSESSID=ST-302661-z67mexu7Ww6GA2s2O7J0n-HXqKMrg-sso-64ccf764df-452rr; login_time=1782992556.2716; uid=55a5x-nH-SGa1ERodGtnzZFSscXhU_SdeJBIpwjEVZz3120; auth=96e7Asyo_F2zWdeo_DDzPuL3aY1ZBAmASus-iVxLippNAEClpvGlpKvcz_2u4PSJqz3AWyyVpGxZ-9d_Ug; is_remember=c14a6vFGzrT0raqcl9lrdFukRuJiRp1gWT7A9_TaeA"
+            self.cookie = "login_time=1782992556.2716; web_language=zh-CN; uid=f5f0pbIxyTwD0fVyCpNnO4Nz6wv2CZCfIaAmkf_8q-10flw; auth=ce62iGktQkHJJYzHE9ealzar0TwRVOMtEQ_kkft1gyRmTwTPhsT_yByUM9gmBG076sZEAV4m8tEfkO40RQ; is_remember=913aXu6o7roy_ImgMhmhlTiuVRAZRr7JoN3ygN3XGg"
             self.cfg["headers"]['Cookie'] = self.cookie
 
             logging.info("登录成功！")
